@@ -8,8 +8,16 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'listar-empleados',
     pathMatch: 'full'
+  },
+  {
+    path: 'listar-empleados',
+    loadChildren: () => import('./listar-empleados/listar-empleados.module').then( m => m.ListarEmpleadosPageModule)
+  },
+  {
+    path: 'crear-empleado',
+    loadChildren: () => import('./crear-empleado/crear-empleado.module').then( m => m.CrearEmpleadoPageModule)
   },
 ];
 

@@ -1,0 +1,48 @@
+<app-header></app-header>
+
+<ion-content class="ion-padding">
+  <!--Formulario reactivo-->
+  <form [formGroup]="formularioCrearEmpleado">
+
+        <ion-input
+          label="Nombre: "
+          formControlName="nombre"
+          placeholder="Ingrese nombre"
+          type="text"
+          label-placement="floating"
+          fill="outline"
+        ></ion-input>
+        <br>
+
+        <ion-input
+          label="Edad: "
+          formControlName="edad"
+          placeholder="Ingrese edad"
+          type="number"
+          label-placement="floating"
+          fill="outline"
+        ></ion-input>
+        <br>
+
+        <ion-input
+          label="Cargo: "
+          formControlName="cargo"
+          placeholder="Ingrese cargo"
+          type="text"
+          label-placement="floating"
+          fill="outline"
+        ></ion-input>
+        <br>
+
+      <ion-button
+        color="primary"
+        (click)="guardarEmpleado()"
+      >Guardar</ion-button>
+
+  </form>
+</ion-content>
+
+<ion-button
+  color="warning"
+  (click)="irAListarEmpleados()"
+>Volver</ion-button>
